@@ -15,7 +15,6 @@ elif IMC>=30 and IMC<=34.9:
     print ("Você esta com obesidade I")
 elif IMC>=35 and IMC<=39.9:
     print ("Você esta com obesidade II")
-
 else: 
  IMC>=40
  print ("Você esta com obesidade III, Procure um medico!")
