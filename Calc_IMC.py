@@ -4,7 +4,7 @@ peso = float(input("digite seu peso"))
 
 IMC = peso/(altura*altura)
 
-print (f"Seu IMC é" ,IMC)
+print (f"Seu IMC é {IMC:.1f}")
 if IMC<=18.5:
     print("você esta com magreza")
 elif IMC>=18.6 and IMC<=24.9:
