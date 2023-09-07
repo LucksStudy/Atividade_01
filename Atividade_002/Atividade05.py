@@ -8,4 +8,4 @@ soma=0
 for numero in numeros:
     soma+= numero
     print("\nNúmeros digitados:", numeros)
-    print("Soma dos valores:", soma)
+    print("Soma dos valores:", soma)#

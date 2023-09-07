@@ -14,4 +14,4 @@ media = soma_notas / 3
 print("\nDados dos Alunos:")
 for nome, nota in alunos.items():
    print(f"{nome}: {nota}")
-print("\nMédia das Notas:", media)
+print("\nMédia das Notas:", media)#
