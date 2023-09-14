@@ -4,6 +4,7 @@ import tkinter as tk
 def fun_dados():
     nome = E_nome.get()
     mensagem = E_men.get()
+    wind.destroy()
     
     wind2 = Tk()
     wind2.title("Para 2º Semestre - Univale")
@@ -15,8 +16,6 @@ def fun_dados():
     saida.grid(column=0, row=0)
 
     wind2.mainloop()
-    
-
 
 wind = Tk()
 wind.title("Entrada de mensagem")
@@ -37,5 +36,4 @@ E_men.grid(column=0, row=4)
 
 botao = Button(wind,padx=10, pady=1, width=31, text='Enviar', command=fun_dados)
 botao.grid(column=0, row=5,)
-botao = Button(wind,padx=10, pady=1, width=31, text='Enviar', command=wind.destroy)
 wind.mainloop()
