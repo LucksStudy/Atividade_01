@@ -15,6 +15,8 @@ def fun_dados():
     saida = Label(wind2, text=resultado)
     saida.grid(column=0, row=0)
 
+    txt_01=Label(wind2,text='O Lucas Dias é lindo')
+    txt_01.grid(column=0, row=2, width=20)
     wind2.mainloop()
 
 wind = Tk()
