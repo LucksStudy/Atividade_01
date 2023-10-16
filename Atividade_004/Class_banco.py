@@ -1,7 +1,7 @@
 class ContaBancaria:
     def __init__(self, titular):
-        self.titular= titular
-        self.saldo= saldo
+        self.titular = titular
+        self.saldo = 0
     
     def depositar(self, valor):
         if valor > 0:
@@ -23,29 +23,38 @@ class ContaBancaria:
     def ver_saldo(self):
         print(f"Saldo atual da conta de {self.titular}: R${self.saldo}")
 
-
 NomeUser =str(input(f"Digite seu nome: "))
-saldo =float(input(f'Digite quantos você tem em conta: '))
-Numero =str(input(f"Digite uma das opções\n 1-Depositar \n 2-Sacar \n 3-Ver Saldo \n"))
-
 minha_conta = ContaBancaria(NomeUser)
 
-if Numero == '1':
-    valor = float(input("Digite o valor a depositar: "))
-    minha_conta.depositar(valor)
+while True:
+    alt = str(input(f'Deseja fazer uma alteração?\n1-Sim\n2-Não\n'))
 
-elif Numero == '2':
-    valor = float(input("Digite o valor a sacar: "))
-    minha_conta.sacar(valor)
+    if alt == '1':
+        Numero = str(input(f"Digite uma das opções\n1-Depositar\n2-Sacar\n3-Ver Saldo\n"))
 
-elif Numero == '3':
-    minha_conta.ver_saldo()
+        if Numero == '1':
+            valor = float(input("Digite o valor a depositar: "))
+            minha_conta.depositar(valor)
 
-else:
-    print('Não é uma opção valida')
+        elif Numero == '2':
+            valor = float(input("Digite o valor a sacar: "))
+            minha_conta.sacar(valor)
+
+        elif Numero == '3':
+            minha_conta.ver_saldo()
+
+        else:
+            print('Não é uma opção válida')
+    elif alt == '2':
+        print('Obrigado pela preferencia!')
+        print('--------------------------')
+        break
+    else:
+        print('Opção inválida. Tente novamente.')
+        break
 
 # Testando a classe ContaBancaria
-conta = ContaBancaria('João')
+conta = ContaBancaria('Dieimes')
 conta.depositar(3000)
 conta.sacar(70)
 conta.sacar(700)
