@@ -1,3 +1,5 @@
+from PySimpleGUI import PySimpleGUI as sg
+
 class ContaBancaria:
     def __init__(self, titular):
         self.titular = titular
@@ -23,6 +25,13 @@ class ContaBancaria:
     def ver_saldo(self):
         print(f"Saldo atual da conta de {self.titular}: R${self.saldo}")
 
+sg.theme ('black')
+layout = [[sg.Text('Theme Browser')],
+          [sg.Text('Click a Theme color to see demo window')],
+          [sg.Listbox(values=sg.theme_list(), size=(20, 12), key='-LIST-', enable_events=True)],
+          [sg.Button('Exit')]]
+
+
 NomeUser =str(input(f"Digite seu nome: "))
 minha_conta = ContaBancaria(NomeUser)
 
@@ -44,7 +53,10 @@ while True:
             minha_conta.ver_saldo()
 
         else:
+            print('----------------------')
             print('Não é uma opção válida')
+            print('----------------------')
+
     elif alt == '2':
         print('--------------------------')
         print('Obrigado pela preferencia!')
@@ -54,7 +66,6 @@ while True:
         print('--------------------------------')
         print('Opção inválida. Tente novamente.')
         print('--------------------------------')
-        break
 
 # Testando a classe ContaBancaria
 conta = ContaBancaria('Dieimes')
