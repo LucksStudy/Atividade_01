@@ -46,11 +46,14 @@ while True:
         else:
             print('Não é uma opção válida')
     elif alt == '2':
+        print('--------------------------')
         print('Obrigado pela preferencia!')
         print('--------------------------')
         break
     else:
+        print('--------------------------------')
         print('Opção inválida. Tente novamente.')
+        print('--------------------------------')
         break
 
 # Testando a classe ContaBancaria
